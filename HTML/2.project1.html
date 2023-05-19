@@ -44,14 +44,12 @@
                 <td><input type="number" name="number" id="number" placeholder="ex:912345678" maxlength="10"></td>
                 <td><p>(10 digit number)</p></td>
             </tr>
-            <tr>
-                <td>
-                    <label for="gender">Gender: </label>
-                </td>
-                <td>Male<input type="radio" name="gender" value="Male"></td>
-                <td>Female<input type="radio" name="gender" value="Female"></td>
-                <td>Others<input type="radio" name="gender" value="Others"></td>
-            </tr>
+            <td>Gender: </td>
+            <td>
+                <label for="Male">Male</label><input type="radio" name="gender" id="Male" value="Male">
+                <label for="Female">Female</label><input type="radio" name="gender" id="Female" value="Female">
+                <label for="others">others</label><input type="radio" name="gender" id="others" value="Others">
+            </td>
             <tr>
                 <td><label for="address">Address</label></td>
                 <td><textarea name="address" id="address" cols="25" rows="3" placeholder="address"></textarea></td>
