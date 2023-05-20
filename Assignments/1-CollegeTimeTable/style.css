@@ -1,0 +1,30 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.fontserif {
+    font-family: 'PT Serif';
+}
+.sub1 {
+    color: cornflowerblue;
+    font-weight: bolder;
+}
+.sub2 {
+    color: rgb(255, 149, 0);
+    font-weight: bolder;
+}
+.sub3 {
+    color: rgb(128, 51, 229);
+    font-weight: bolder;
+}
+.sub4 {
+    color: rgb(36, 120, 19);
+    font-weight: bolder;
+}
+.sub5 {
+    color: rgb(253, 29, 29);
+    font-weight: bolder;
+}
+.swa {
+    color: rgb(255, 0, 0);
+    font-weight: 900;
+}
