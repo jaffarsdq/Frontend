@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+#parent {
+    background-color: bisque;
+    border: solid red 10px;
+}
+
+#parent div {
+    border: solid blue 2px;
+    padding: 10px;
+}
