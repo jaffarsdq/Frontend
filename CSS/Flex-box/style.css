@@ -1,16 +1,27 @@
 * {
     box-sizing: border-box;
 }
-*,*:before,*:after {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
 #parent {
-    background-color: bisque;
     border: solid red 10px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 400px;
 }
 
 #parent div {
+    background-color: blanchedalmond;
     border: solid blue 2px;
-    padding: 10px;
+    padding: 20px;
+    max-height: 100px;
+}
+
+#parent :first-child {
+    flex-grow: 2;
+}
+#parent :last-child {
+    flex-grow: 1;
 }
