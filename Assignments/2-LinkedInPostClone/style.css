@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-*, * :after, * :before {
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
@@ -17,8 +17,10 @@ body {
     background-color: white;
     border-radius: 8px;
     width: 550px;
-    margin: 0 auto;
-    border: solid rgba(0, 0, 0, 0.2) 1.5px;
+    margin: 125px auto;
+    /* border: solid rgba(0, 0, 0, 0.2) 1.5px; */
+    background-color: #f0f0f0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);                             
 }
 #card {
     display: flex;
@@ -125,4 +127,8 @@ body {
 }
 #like-section :first-child {
     color: #1b74d2;
+}
+
+#like-section button:hover{
+    color: #60adffe1;
 }
