@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    /* border: ; */
+    /* padding: 0; */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+/* .internal {
+    display: flex;
+    justify-content: center;
+} */
+#display-value {
+    height: 50px; 
+}
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button{
+    width: 90px;
+}
