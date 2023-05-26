@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    /* border: ; */
+    /* padding: 0; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(155deg, #0c6cfdd8 50%, rgb(255, 255, 255) 50%);
+    background-repeat: no-repeat;
+}
+  
+
+.card-parent {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    border-radius: 2px;
+    width: 550px;
+    margin: 30px auto;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);      
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center; 
+}
+
+.sign-up {
+    padding: 5px 0;
+    text-align: center;
+    font-size: large;
+}
+
+.forgot-psd, #psd{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    color: #0fa7d9;
+    font-weight: 100;
+    font-size: small;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+#sign-in {
+    background-color: #0c6efd;
+    border: none;
+    padding: 8px;
+    width: 400px;
+    font-size: small;
+    color: whitesmoke;
+}
+
+#e-mail, #password {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+    outline: none;
+    width: 400px;
+    padding: 5px;
+    margin: 5px;
+}
+.top {
+    margin: 10px 0;
+}
+.sign-in-with {
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    color: grey;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#f,#t,#g {
+    width: 30px;
+    padding: 3px 8px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+}
+
+#f {
+    background-color: #0c6efd;
+}
+#t {
+    background-color: #800cfd;
+}
+#g {
+    background-color: #fd480c;
+}
+
+button:hover {
+    opacity: 0.7;
+}
