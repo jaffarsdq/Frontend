@@ -12,8 +12,16 @@
 body {
     background: linear-gradient(155deg, #0c6cfdd8 50%, rgb(255, 255, 255) 50%);
     background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
-  
+.parent {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .card-parent {
     position: relative;
