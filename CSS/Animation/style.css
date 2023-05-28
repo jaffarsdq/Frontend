@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 *, *:before, *:after {
     box-sizing: inherit;
 }
@@ -8,6 +9,7 @@
 .parent {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .static {
@@ -18,9 +20,41 @@
 }
 
 .moving {
-    margin-top: 25px;
-    background-color: blue;
-    border-radius: 50%;
     width: 50px;
     height: 50px;
+}
+
+@keyframes rotater {
+    0% {
+        border-radius: 50%;
+        transform: translateX(-660px) rotate(0);
+        background-color: rgb(0, 255, 234);
+        transition-timing-function: ease-out;
+    }
+    25% {
+        border-radius: 25%;
+        transform: rotate(60deg);
+    }
+    50% {
+        border-radius: 50%;
+        transform: translateX(660px) rotate(120deg);
+        background-color: rgb(255, 136, 0); 
+    }
+    75% {
+        border-radius: 25%;
+        background-color: blueviolet;
+        transform: rotate(180deg);
+    }
+    100% {
+        border-radius: 50%;
+        transform: translateX(-660px) rotate(240deg);
+        background-color: aqua;
+    }
+}
+
+.moving{    
+    animation-name: rotater;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
