@@ -1,29 +1,19 @@
 * {
     box-sizing: border-box;
-    /* border: ; */
-    /* padding: 0; */
+    /* border: 0; 
+    padding: 0; */
 }
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
-/* .internal {
-    display: flex;
-    justify-content: center;
-} */
-#display-value {
-    height: 50px; 
-}
-.buttons {
-    display: flex;
-    justify-content: space-between;
+.last {
+    /* flex-basis: 50%; */
 }
 
-.buttons button{
-    width: 90px;
+.result::placeholder{
+    padding: 2%;
+    font-size: xx-large;
+    font-weight: 1000;
 }
