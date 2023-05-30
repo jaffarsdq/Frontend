@@ -8,10 +8,6 @@
     box-sizing: inherit;
 }
 
-.last {
-    /* flex-basis: 50%; */
-}
-
 .result::placeholder{
     padding: 2%;
     font-size: xx-large;
