@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --cloudy : #e3f2fd;
+    --blue: rgb(27, 92, 206);
+}
+
+.all-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    color: white;
+    width: 1300px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 2rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); 
+}
+
+.all-products:hover {
+    box-shadow: none;
+}
+
+.welcome {
+    padding: 2rem;
+    letter-spacing: 1rem;
+}

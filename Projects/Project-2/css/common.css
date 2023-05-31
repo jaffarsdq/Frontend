@@ -9,8 +9,12 @@ html {
     box-sizing: inherit;
 }
 
+:root {
+    --cloudy : #e3f2fd;
+}
+
 .header .navbar{
-    background-color: #e3f2fd;
+    background-color: var(--cloudy);
 }
 
 .cart:hover {
@@ -19,4 +23,8 @@ html {
 
 .nav-brand {
     letter-spacing: 1rem;
+}
+
+footer,a {
+    background-color: var(--cloudy);
 }
