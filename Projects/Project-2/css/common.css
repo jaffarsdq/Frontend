@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+    border: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.header .navbar{
+    background-color: #e3f2fd;
+}
+
+.cart:hover {
+    text-decoration-line: underline;
+}
+
+.nav-brand {
+    letter-spacing: 1rem;
+}
