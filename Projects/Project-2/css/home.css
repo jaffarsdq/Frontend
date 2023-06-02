@@ -14,17 +14,20 @@ html {
     --blue: rgb(27, 92, 206);
 }
 
+.product-list {
+    margin-bottom: 180px;
+}
+
 .all-products {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--blue);
     color: white;
-    width: 1300px;
     height: 100px;
-    margin: 5px;
+    width: 200px;
     border-radius: 2rem;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4); 
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4); 
 }
 
 .all-products:hover {
