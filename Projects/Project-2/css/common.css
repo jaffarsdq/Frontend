@@ -10,11 +10,16 @@ html {
 }
 
 :root {
-    --cloudy : #e3f2fd;
+    --cloudy: #e3f2fd;
 }
 
 .header .navbar{
     background-color: var(--cloudy);
+}
+
+.welcome {
+    padding: 2rem;
+    letter-spacing: 1rem;
 }
 
 .cart:hover {
