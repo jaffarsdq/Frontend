@@ -1,0 +1,17 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+.red {
+    background-color: #f93154;
+}
+
+.green {
+    background-color: #02b74b;
+}
