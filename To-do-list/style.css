@@ -8,10 +8,22 @@ html {
     box-sizing: inherit;
 }
 
-.red {
-    background-color: #f93154;
+
+.card {
+    padding: 30px;
+    width: 1000px;
 }
 
-.green {
-    background-color: #02b74b;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-search {
+  
+    display: flex;
+    flex-flow: column wrap;
+    /* justify-content: center; */
+    align-items: center;
 }
