@@ -8,10 +8,14 @@ html {
     box-sizing: inherit;
 }
 
+.btn {
+    font-weight: 500;
+}
 
 .card {
     padding: 30px;
-    width: 1000px;
+    width: 1200px;
+    min-height: 400px;
 }
 
 .box {

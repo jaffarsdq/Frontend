@@ -15,7 +15,7 @@
 
     <!-- Page Title -->
         <div class="container text-center my-5">
-            <h1 class="display-5">To-Do App</h1>
+            <h1 class="display-5 fw-normal">To-Do <span class="fw-lighter">App</span></h1>
         </div>
     
     <!-- Box-parent -->
@@ -25,24 +25,24 @@
             <div class="card shadow-lg p-4">
 
                 <!-- content -->
-                <div class="container-md">
+                <div class="container-fluid">
 
                     <!-- Search-box & Buttons -->
                     <div class="row d-flex justify-content-center align-items-center mt-3 mb-5">
                         <div class="col-12 m-1 col-sm-6 form-group">
-                            <input type="text" class="form-control text-center" placeholder="Add a Todo">
+                            <input type="text" class="form-control text-center" id="add-todo" placeholder="Add a To-Do...">
                         </div>
-                        <button class="col-3 col-sm-1 py-2 my-1 me-1 btn btn-primary">Save</button>
-                        <button class="col-8 col-sm-3 p-2 btn btn-warning text-white">Get pending todo</button>
+                        <button class="col-3 col-sm-1 px-2 my-1 me-1 btn btn-primary shadow">Save</button>
+                        <button class="col-8 col-sm-3 px-0 py-2 btn btn-warning shadow">Get pending To-Do</button>
                     </div>
                     
                     <!-- Heading -->
                     <div class="container-fluid mt-4 ">
                         <div class="row">
-                            <h6 class="col-2">No.</h6>
-                            <h6 class="col-4">To-Do item</h6>
-                            <h6 class="col-4 col-sm-2">Status</h6>
-                            <h6 class="col-sm-4">Actions</h6>
+                            <h6 class="col-1 m-0 p-0 fw-bold">No.</h6>
+                            <h6 class="col-5 fw-bold">To-Do item</h6>
+                            <h6 class="col-4 col-sm-2 fw-bold">Status</h6>
+                            <h6 class="col-sm-4 fw-bold">Actions</h6>
                         </div>
                     </div>
                 
@@ -54,19 +54,33 @@
                     <!-- To-Do list -->
                     <div class="container-fluid my-5">
                         <div class="row">
-                            <h6 class="col-2">1.</h6>
-                            <p class="text-muted col-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laboriosam!</p>
+                            <h6 class="col-1 m-0 p-0">1.</h6>
+                            <p class="text-muted col-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laboriosam!</p>
                             <p class="text-muted col-6 col-sm-2">in progress</p>
                             <div class="col-sm-4 align-items-center">
-                                <button class="col-12 col-sm-4 py-1 px-0 mb-1 me-1 btn btn btn-danger shadow text-white ">Delete</button>
-                                <button class="col-12 col-sm-5 py-1 px-0 mb-1 me-1 btn btn-success text-white shadow">Finished</button>
-                                <button class="col-12 col-sm-2 py-1 px-0 mb-1 me-1 btn btn-warning text-white shadow">Edit</button>
+                                <button class="col-12 col-sm-3 py-1 px-0 mb-1 me-1 btn btn btn-danger shadow">Delete</button>
+                                <button class="col-12 col-sm-4 py-1 px-0 mb-1 me-1 btn btn-success shadow">Finished</button>
+                                <button class="col-12 col-sm-3 py-1 px-0 mb-1 me-1 btn btn-warning shadow">Edit</button>
                             </div>
                         </div>
-                        <div class="container">
+                        <div class="container-xl">
                             <hr class="border border-dark-subtle">
                         </div>
-                    </div>
+                        <!-- <div class="row">
+                            <h6 class="col-1 m-0 p-0">1.</h6>
+                            <p class="text-muted col-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, laboriosam!</p>
+                            <p class="text-muted col-6 col-sm-2">in progress</p>
+                            <div class="col-sm-4 align-items-center">
+                                <button class="col-12 col-sm-3 py-1 px-0 mb-1 me-1 btn btn btn-danger shadow">Delete</button>
+                                <button class="col-12 col-sm-4 py-1 px-0 mb-1 me-1 btn btn-success shadow">Finished</button>
+                                <button class="col-12 col-sm-3 py-1 px-0 mb-1 me-1 btn btn-warning shadow">Edit</button>
+                            </div>
+                        </div>
+                        <div class="container-xl">
+                            <hr class="border border-dark-subtle">
+                        </div> -->
+
+                    </div>  
 
                 </div>
             </div>
@@ -76,7 +90,7 @@
         <script src="todo.js">
 
         </script>
-        
+
     <!-- Bootstrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
