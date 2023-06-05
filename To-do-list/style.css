@@ -31,3 +31,7 @@ html {
     /* justify-content: center; */
     align-items: center;
 }
+
+.todo-detail {
+    text-align: justify;
+}
