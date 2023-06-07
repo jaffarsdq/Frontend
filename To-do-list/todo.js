@@ -1,11 +1,11 @@
 console.log("welcome to my app")
 
 let todos = [];
-
-let todoDataSection = document.getElementById("todo-data");
+console.log(todos);
+let todoDataSection = document.getElementById("todo-data-list");
 let saveButton = document.getElementById("save-todo");
 let todoInputBar = document.getElementById("add-todo");
-console.log(todoInputBar);
+
 todoInputBar.addEventListener("keyup", function toggleSaveButton() {
     let todotext = todoInputBar.value;
     if(todotext.length == 0) {
@@ -16,21 +16,55 @@ todoInputBar.addEventListener("keyup", function toggleSaveButton() {
     }
 })
 
+// save todo
 saveButton.addEventListener("click", function getTextAndAddTodo() {
     let todotext = todoInputBar.value;
     if(todotext.length == 0) return;
-    todos.push(todotext);
-    addToDo(todotext,todos.length);
+    let todo = {text: todotext, status: "In progress",finishButtonText: "Finished"};
+    todos.push(todo);
+    addToDo(todo,todos.length);
     todoInputBar.value = "";
 })
 
+// re-render todo
+function reRenderTodo() {
+    todoDataSection.innerHTML = "";
+    todos.forEach((element, idx) => {
+        addToDo(element, idx + 1);
+    })
+}
+// delete todo
 function removeTodo (event) {
-//    console.log("clicked", event.target.parentElement.parentElement)
-//    event.target.parentElement.parentElement.remove();
-    
+    let deleteButtonPressed = event.target;
+    let idxTobeRemoved = Number(deleteButtonPressed.getAttribute("todo-idx"));
+    todos.splice(idxTobeRemoved, 1);
+    reRenderTodo();
 }
 
-function addToDo(todoData,todoCount) {
+// finish todo
+function finishTodo(event) {
+    let finishedButtonPressed = event.target;
+    let idxTobeFinished = Number(finishedButtonPressed.getAttribute("todo-idx"));
+
+    // toggle
+    if(todos[idxTobeFinished].status == "Finished") {
+        todos[idxTobeFinished].status = "In progress";
+        todos[idxTobeFinished].finishButtonText = "Finished";
+    } else {
+        todos[idxTobeFinished].status = "Finished";
+        todos[idxTobeFinished].finishButtonText = "Undo";
+    }
+
+    todos.sort((a, b) => {
+        if(a.status == "Finished") {
+            return 1;
+        }
+        return -1;
+    })
+    reRenderTodo();    
+}
+
+function addToDo(todo,todoCount) {
     console.log("called add to do")
     let rowDiv = document.createElement("div");
     let todoNumber = document.createElement("h6");
@@ -42,28 +76,28 @@ function addToDo(todoData,todoCount) {
     let editButton = document.createElement("button");
     let hr = document.createElement("hr");
 
+    
     // adding classes
     rowDiv.classList.add("row");
     todoNumber.classList.add("todo-no", "col-1", "m-0", "p-0", "text-center");
     todoDetail.classList.add("todo-detail", "text-muted", "col-11", "col-sm-5");
-    todoStatus.classList.add("todo-status", "text-primary","col-12", "col-sm-2", "text-center");
+    todoStatus.classList.add("todo-status","col-12", "col-sm-2", "text-center", "text-muted");
     todoActions.classList.add("todo-actions","col-sm-4","align-items-center")
     deleteButton.classList.add("col-12","col-sm-3","py-1","px-0","mb-1","me-1","btn","btn-danger","shadow", "delete-todo")
     finishedButton.classList.add("col-12","col-sm-4","py-1","px-0","mb-1","me-1","btn","btn-success","shadow","finish-todo")
     editButton.classList.add("col-12","col-sm-3","py-1","px-0","mb-1","me-1","btn","btn-warning","shadow","edit-todo")
 
+    finishedButton.setAttribute("todo-idx", todoCount-1);
+    deleteButton.setAttribute("todo-idx", todoCount-1);
     deleteButton.onclick = removeTodo;
+    finishedButton.onclick = finishTodo;
 
     todoNumber.textContent = `${todoCount}.`;
-    todoDetail.textContent = todoData;
-    todoStatus.textContent = "In progress";
+    todoDetail.textContent = todo.text;
+    todoStatus.textContent = todo.status;
     deleteButton.textContent = "Delete";
-    finishedButton.textContent = "Finished";
+    finishedButton.textContent = todo.finishButtonText;
     editButton.textContent = "Edit";
-
-    todoActions.appendChild(deleteButton);
-    todoActions.appendChild(finishedButton);
-    todoActions.appendChild(editButton);
 
     rowDiv.appendChild(todoNumber);
     rowDiv.appendChild(todoDetail);
@@ -71,4 +105,9 @@ function addToDo(todoData,todoCount) {
     rowDiv.appendChild(todoActions);
     rowDiv.appendChild(hr);
     todoDataSection.appendChild(rowDiv);
+
+    todoActions.appendChild(deleteButton);
+    todoActions.appendChild(finishedButton);
+    todoActions.appendChild(editButton);
+
 }
