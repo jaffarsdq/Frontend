@@ -14,9 +14,6 @@ html {
     --blue: rgb(27, 92, 206);
 }
 
-.product-list {
-    margin-bottom: 180px;
-}
 
 .all-products {
     display: flex;
@@ -37,4 +34,10 @@ html {
 .welcome {
     padding: 2rem;
     letter-spacing: 1rem;
+}
+
+a {
+    color: white;
+    background-color: inherit;
+    text-decoration: none;
 }
