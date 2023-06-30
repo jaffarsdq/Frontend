@@ -13,8 +13,8 @@
 }
 
 .card img{
-    min-height:230px;
-    min-width: 200px;
+    height:250px;
+    width: 100%;
     
 }
 
@@ -26,7 +26,13 @@
     box-shadow: none;
 }
 
-.search-product-wrapper {
+a {
+    background-color: inherit;
+    text-decoration: none;
+} 
+
+.search-products-wrapper {
     position: sticky;
     top: 10px;
-  }
+    height: 10vh;
+}
